@@ -14,6 +14,12 @@
 		503537442949263C008F08A7 /* AuthenticationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503537432949263C008F08A7 /* AuthenticationAppTests.swift */; };
 		5035374E2949263C008F08A7 /* AuthenticationAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035374D2949263C008F08A7 /* AuthenticationAppUITests.swift */; };
 		503537502949263C008F08A7 /* AuthenticationAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035374F2949263C008F08A7 /* AuthenticationAppUITestsLaunchTests.swift */; };
+		5035375D294926B2008F08A7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035375C294926B2008F08A7 /* Credentials.swift */; };
+		5035375F2949291D008F08A7 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035375E2949291D008F08A7 /* Authentication.swift */; };
+		5035376129492E06008F08A7 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035376029492E06008F08A7 /* KeychainStorage.swift */; };
+		5035376429493193008F08A7 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5035376329493193008F08A7 /* SwiftKeychainWrapper */; };
+		5035376629493E97008F08A7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035376529493E97008F08A7 /* LoginViewModel.swift */; };
+		50353768294942EC008F08A7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50353767294942EC008F08A7 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,11 @@
 		503537492949263C008F08A7 /* AuthenticationAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthenticationAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5035374D2949263C008F08A7 /* AuthenticationAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAppUITests.swift; sourceTree = "<group>"; };
 		5035374F2949263C008F08A7 /* AuthenticationAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5035375C294926B2008F08A7 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		5035375E2949291D008F08A7 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		5035376029492E06008F08A7 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		5035376529493E97008F08A7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		50353767294942EC008F08A7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5035376429493193008F08A7 /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,11 @@
 				503537342949263B008F08A7 /* ContentView.swift */,
 				503537362949263C008F08A7 /* Assets.xcassets */,
 				503537382949263C008F08A7 /* Preview Content */,
+				5035375C294926B2008F08A7 /* Credentials.swift */,
+				5035375E2949291D008F08A7 /* Authentication.swift */,
+				5035376029492E06008F08A7 /* KeychainStorage.swift */,
+				5035376529493E97008F08A7 /* LoginViewModel.swift */,
+				50353767294942EC008F08A7 /* HomeView.swift */,
 			);
 			path = AuthenticationApp;
 			sourceTree = "<group>";
@@ -143,6 +160,9 @@
 			dependencies = (
 			);
 			name = AuthenticationApp;
+			packageProductDependencies = (
+				5035376329493193008F08A7 /* SwiftKeychainWrapper */,
+			);
 			productName = AuthenticationApp;
 			productReference = 5035372F2949263B008F08A7 /* AuthenticationApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 503537262949263B008F08A7;
+			packageReferences = (
+				5035376229493193008F08A7 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
 			productRefGroup = 503537302949263B008F08A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5035375D294926B2008F08A7 /* Credentials.swift in Sources */,
+				50353768294942EC008F08A7 /* HomeView.swift in Sources */,
 				503537352949263B008F08A7 /* ContentView.swift in Sources */,
+				5035376629493E97008F08A7 /* LoginViewModel.swift in Sources */,
+				5035376129492E06008F08A7 /* KeychainStorage.swift in Sources */,
 				503537332949263B008F08A7 /* AuthenticationAppApp.swift in Sources */,
+				5035375F2949291D008F08A7 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +447,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuthenticationApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Necesitas autenticarte mediante el sensor biometrico";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +476,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuthenticationApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Necesitas autenticarte mediante el sensor biometrico";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5035376229493193008F08A7 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5035376329493193008F08A7 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5035376229493193008F08A7 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 503537272949263B008F08A7 /* Project object */;
 }
